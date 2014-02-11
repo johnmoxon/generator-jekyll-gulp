@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-jekyll-gulp' ]; then cd .. && eval "mv $currentfolder generator-jekyll-gulp" && cd generator-jekyll-gulp; fi
+
