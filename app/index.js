@@ -26,14 +26,14 @@ var JekyllGulpGenerator = yeoman.generators.Base.extend({
     console.log(chalk.magenta('You\'re using the fantastic JekyllGulp generator.'));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      // type: 'confirm',
+      name: 'githubUser',
+      message: 'Would you mind giving me your github username please?'//,
+      // default: true
     }];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.githubUser = props.githubUser;
 
       done();
     }.bind(this));
